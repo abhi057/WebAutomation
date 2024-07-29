@@ -9,22 +9,28 @@ import shoppingTests.pageObjects.ConfirmationPage;
 import shoppingTests.pageObjects.ProductsPage;
 import shoppingTests.reusableComponents.BaseTest;
 
-public class PlaceOrderTest extends BaseTest{
+public class ErrorValidations extends BaseTest{
 
 	@Test
-	public void submitOrderTest() throws InterruptedException {
+	public void loginErrorTest() throws InterruptedException {
+					
+		ProductsPage productsPage = landingpage.userLogin("abhi@yahoo.com", "incorrectPWD");	
+		Assert.assertEquals("Incorrect email or password.", landingpage.getErrorMsg());
+	}
+	
+	
+	@Test
+	public void productErrorTest() throws InterruptedException {
 					
 		ProductsPage productsPage = landingpage.userLogin("abhi@yahoo.com", "Qwerty@123");	
 		Thread.sleep(3000); 	
 		productsPage.addToCart();
 		Thread.sleep(3000);
 		CartPage cartPage = productsPage.goToCartPage();
-	    Assert.assertTrue(cartPage.verifyProductDisplayed("ADIDAS ORIGINAL"));    
-		CheckOutPage checkoutpage = cartPage.goToCheckOut();	
-		checkoutpage.selectCountry("India");
-		ConfirmationPage confirmationPage = checkoutpage.submitOrder();		
-	    Assert.assertTrue(confirmationPage.verifyElementDisplayed());		
+	    Assert.assertFalse(cartPage.verifyProductDisplayed("PUMA INCORRECT PRODUCT"));    	
 		Thread.sleep(5000);
 	}
+	
+
 
 }

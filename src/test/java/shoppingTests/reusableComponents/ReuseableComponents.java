@@ -33,6 +33,12 @@ public class ReuseableComponents {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 	
+	
+	public void waitForElementToAppear(WebElement locator) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOf(locator));
+	}
+	
 
 	public void waitForElementToBeInvisible(By locator) throws InterruptedException {
 		

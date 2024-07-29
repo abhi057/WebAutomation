@@ -4,12 +4,15 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import shoppingTests.pageObjects.LandingPage;
 
 public class BaseTest {
 	
 	WebDriver driver;
+	public LandingPage landingpage;
 	
 	public WebDriver initializeDriver()
 	{
@@ -20,13 +23,20 @@ public class BaseTest {
 		
 	}
 	
-	
+	@BeforeMethod()
 	public LandingPage launchApplication() {
 		driver = initializeDriver();
-		LandingPage  landingpage = new LandingPage(driver);
+		landingpage = new LandingPage(driver);
 		landingpage.goTo();	
 		return landingpage;
 		
+	}
+	
+	
+	@AfterMethod()
+	public void tearDown(){
+		
+		driver.quit();
 	}
 
 }
