@@ -47,8 +47,5 @@ public class CheckOutPage extends ReuseableComponents {
 		return new ConfirmationPage(driver);
 	}
 	
-	
-
-
 		
 }

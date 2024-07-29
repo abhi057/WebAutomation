@@ -29,6 +29,9 @@ public class LandingPage extends ReuseableComponents {
 	@FindBy(id="login")
 	WebElement submit;
 	
+	@FindBy(css="[class*='flyInOut']")
+	WebElement errorMessage;
+	
 	public ProductsPage userLogin(String email, String password)
 	{
 		userEmail.sendKeys(email);
@@ -36,6 +39,12 @@ public class LandingPage extends ReuseableComponents {
 		submit.click();	
 		ProductsPage productsPage = new ProductsPage(driver);
 	    return productsPage;
+	}
+	
+	public String getErrorMsg() {
+		waitForElementToAppear(errorMessage);
+		return errorMessage.getText();
+		
 	}
 	
 	
