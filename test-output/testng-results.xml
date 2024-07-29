@@ -1,51 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="3" total="5" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-28T23:40:02 IST" name="ShoppingTestSuite" finished-at="2024-07-28T23:40:42 IST" duration-ms="39521">
+  <suite started-at="2024-07-29T17:57:14 IST" name="ShoppingTestSuite" finished-at="2024-07-29T17:57:53 IST" duration-ms="38420">
     <groups>
+      <group name="Purchase">
+        <method signature="PlaceOrderTest.submitOrderTest(java.util.HashMap)[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" name="submitOrderTest" class="shoppingsitetests.PlaceOrderTest"/>
+      </group> <!-- Purchase -->
+      <group name="Smoke">
+        <method signature="PlaceOrderTest.submitOrderTest(java.util.HashMap)[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" name="submitOrderTest" class="shoppingsitetests.PlaceOrderTest"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2024-07-28T23:40:02 IST" name="SanityTests" finished-at="2024-07-28T23:40:42 IST" duration-ms="39521">
-      <class name="shoppingsitetests.ErrorValidations">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shoppingsitetests.ErrorValidations@6d3a388c]" started-at="2024-07-28T23:40:02 IST" name="launchApplication" finished-at="2024-07-28T23:40:05 IST" duration-ms="2782" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="loginErrorTest()[pri:0, instance:shoppingsitetests.ErrorValidations@6d3a388c]" started-at="2024-07-28T23:40:05 IST" name="loginErrorTest" finished-at="2024-07-28T23:40:06 IST" duration-ms="1132" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginErrorTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:shoppingsitetests.ErrorValidations@6d3a388c]" started-at="2024-07-28T23:40:06 IST" name="tearDown" finished-at="2024-07-28T23:40:07 IST" duration-ms="230" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shoppingsitetests.ErrorValidations@6d3a388c]" started-at="2024-07-28T23:40:07 IST" name="launchApplication" finished-at="2024-07-28T23:40:08 IST" duration-ms="1773" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="productErrorTest()[pri:0, instance:shoppingsitetests.ErrorValidations@6d3a388c]" started-at="2024-07-28T23:40:08 IST" name="productErrorTest" finished-at="2024-07-28T23:40:23 IST" duration-ms="14696" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- productErrorTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:shoppingsitetests.ErrorValidations@6d3a388c]" started-at="2024-07-28T23:40:23 IST" name="tearDown" finished-at="2024-07-28T23:40:24 IST" duration-ms="976" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- shoppingsitetests.ErrorValidations -->
+    <test started-at="2024-07-29T17:57:14 IST" name="Submit Order Tests" finished-at="2024-07-29T17:57:53 IST" duration-ms="38380">
       <class name="shoppingsitetests.PlaceOrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shoppingsitetests.PlaceOrderTest@7133da86]" started-at="2024-07-28T23:40:24 IST" name="launchApplication" finished-at="2024-07-28T23:40:26 IST" duration-ms="1833" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" started-at="2024-07-29T17:57:15 IST" name="launchApplication" finished-at="2024-07-29T17:57:19 IST" duration-ms="4546" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrderTest()[pri:0, instance:shoppingsitetests.PlaceOrderTest@7133da86]" started-at="2024-07-28T23:40:26 IST" name="submitOrderTest" finished-at="2024-07-28T23:40:41 IST" duration-ms="15548" status="PASS">
+        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" started-at="2024-07-29T17:57:19 IST" name="submitOrderTest" data-provider="getData" finished-at="2024-07-29T17:57:35 IST" duration-ms="15515" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Qwerty@123, product=ADIDAS ORIGINAL, email=abhi@yahoo.com}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrderTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:shoppingsitetests.PlaceOrderTest@7133da86]" started-at="2024-07-28T23:40:41 IST" name="tearDown" finished-at="2024-07-28T23:40:42 IST" duration-ms="516" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" started-at="2024-07-29T17:57:35 IST" name="tearDown" finished-at="2024-07-29T17:57:35 IST" duration-ms="186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" started-at="2024-07-29T17:57:35 IST" name="launchApplication" finished-at="2024-07-29T17:57:37 IST" duration-ms="1891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" started-at="2024-07-29T17:57:37 IST" name="submitOrderTest" data-provider="getData" finished-at="2024-07-29T17:57:52 IST" duration-ms="15527" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Qwerty@123, product=ADIDAS ORIGINAL, email=abhi@yahoo.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrderTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" started-at="2024-07-29T17:57:52 IST" name="tearDown" finished-at="2024-07-29T17:57:53 IST" duration-ms="359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- shoppingsitetests.PlaceOrderTest -->
-    </test> <!-- SanityTests -->
+    </test> <!-- Submit Order Tests -->
+    <test started-at="2024-07-29T17:57:53 IST" name="Error Tests" finished-at="2024-07-29T17:57:53 IST" duration-ms="2">
+    </test> <!-- Error Tests -->
   </suite> <!-- ShoppingTestSuite -->
 </testng-results>

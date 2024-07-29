@@ -11,7 +11,7 @@ import shoppingTests.reusableComponents.BaseTest;
 
 public class ErrorValidations extends BaseTest{
 
-	@Test
+	@Test(groups={"LoginError"})
 	public void loginErrorTest() throws InterruptedException {
 					
 		ProductsPage productsPage = landingpage.userLogin("abhi@yahoo.com", "incorrectPWD");	
@@ -19,7 +19,7 @@ public class ErrorValidations extends BaseTest{
 	}
 	
 	
-	@Test
+	@Test(groups={"ProductError"})
 	public void productErrorTest() throws InterruptedException {
 					
 		ProductsPage productsPage = landingpage.userLogin("abhi@yahoo.com", "Qwerty@123");	
