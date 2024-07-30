@@ -9,14 +9,80 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">ShoppingTestSuite</th></tr>
-<tr><td><a href="#t0">Submit Order Tests</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">38,380</td><td>Smoke</td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Error Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td>Smoke</td><td></td></tr>
-<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">38,382</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">Error Tests</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">2</td><td class="num attn">1</td><td class="num">28,641</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Submit Order Tests</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">2</td><td class="num">53,501</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">1</th><th class="num attn">1</th><th class="num attn">2</th><th class="num attn">3</th><th class="num">82,142</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">ShoppingTestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Submit Order Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">shoppingsitetests.PlaceOrderTest</td><td><a href="#m0">submitOrderTest</a></td><td rowspan="2">1722256039629</td><td rowspan="2">15515</td></tr><tr class="passedeven"><td><a href="#m1">submitOrderTest</a></td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4" class="invisible"/></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">ShoppingTestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Error Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">shoppingsitetests.ErrorValidations</td><td><a href="#m0">loginErrorTest</a></td><td rowspan="1">1722338828206</td><td rowspan="1">1088</td></tr><tr><th colspan="4">Error Tests &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="2">shoppingsitetests.ErrorValidations</td><td><a href="#m1">loginErrorTest</a></td><td rowspan="2">1722338825733</td><td rowspan="2">612</td></tr><tr class="retriedeven"><td><a href="#m2">loginErrorTest</a></td></tr><tr><th colspan="4">Error Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">shoppingsitetests.ErrorValidations</td><td><a href="#m3">productErrorTest</a></td><td rowspan="1">1722338832006</td><td rowspan="1">14756</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Submit Order Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">shoppingsitetests.PlaceOrderTest</td><td><a href="#m4">submitOrderTest</a></td><td rowspan="2">1722338822979</td><td rowspan="2">36657</td></tr><tr class="failedeven"><td><a href="#m5">submitOrderTest</a></td></tr><tr><th colspan="4">Submit Order Tests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">shoppingsitetests.PlaceOrderTest</td><td><a href="#m6">orderHistory</a></td><td rowspan="1">1722338872286</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Submit Order Tests</h2><h3 id="m0">shoppingsitetests.PlaceOrderTest#submitOrderTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=Qwerty@123, product=ADIDAS ORIGINAL, email=abhi@yahoo.com}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">shoppingsitetests.PlaceOrderTest#submitOrderTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=Qwerty@123, product=ADIDAS ORIGINAL, email=abhi@yahoo.com}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Error Tests</h2></body>
+<h2>Error Tests</h2><h3 id="m0">shoppingsitetests.ErrorValidations#loginErrorTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Incorrect email or password.] but found [Incorrect email or passwor]
+	at shoppingsitetests.ErrorValidations.loginErrorTest(ErrorValidations.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">shoppingsitetests.ErrorValidations#loginErrorTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Incorrect email or password.] but found [Incorrect email or passwor]
+	at shoppingsitetests.ErrorValidations.loginErrorTest(ErrorValidations.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">shoppingsitetests.ErrorValidations#loginErrorTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Incorrect email or password.] but found [Incorrect email or passwor]
+	at shoppingsitetests.ErrorValidations.loginErrorTest(ErrorValidations.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">shoppingsitetests.ErrorValidations#productErrorTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Submit Order Tests</h2><h3 id="m4">shoppingsitetests.PlaceOrderTest#submitOrderTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=Qwerty@123, product=ADIDAS ORIGINAL, email=abhi@yahoo.com}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at shoppingsitetests.PlaceOrderTest.submitOrderTest(PlaceOrderTest.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">shoppingsitetests.PlaceOrderTest#submitOrderTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=Qwerty@123, product=ADIDAS ORIGINAL, email=abhi@yahoo.com}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button _ngcontent-pdy-c33=&quot;&quot; routerlink=&quot;/dashboard/cart&quot; class=&quot;btn btn-custom&quot; style=&quot;margin-top: -10px;&quot; tabindex=&quot;0&quot;&gt;...&lt;/button&gt; is not clickable at point (1280, 27). Other element would receive the click: &lt;div _ngcontent-pdy-c31=&quot;&quot; class=&quot;ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating&quot; style=&quot;background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=126.0.6478.185)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [19d6159a6dcaec1935457ca125ded084, clickElement {id=f.78B2116AA4FCA4E0590DC1B77D767E5F.d.6926711EBF0AF1DFD9011AA2BA9B37C7.e.178}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.185, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Abhishek\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56185}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56185/devtoo..., se:cdpVersion: 126.0.6478.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (19d6159a6dcaec1935457ca125ded084)] -&gt; xpath: //button[@class=&apos;btn btn-custom&apos; and contains(@routerlink, &apos;cart&apos;)]]
+Session ID: 19d6159a6dcaec1935457ca125ded084
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at shoppingTests.reusableComponents.ReuseableComponents.goToCartPage(ReuseableComponents.java:56)
+	at shoppingsitetests.PlaceOrderTest.submitOrderTest(PlaceOrderTest.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">shoppingsitetests.PlaceOrderTest#orderHistory</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method PlaceOrderTest.orderHistory()[pri:0, instance:shoppingsitetests.PlaceOrderTest@6d4e5011] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 9 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
 </html>

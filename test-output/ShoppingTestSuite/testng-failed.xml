@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [ShoppingTestSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Submit Order Tests(failed)">
-    <groups>
-      <run>
-        <include name="Smoke"/>
-      </run>
-    </groups>
+<suite parallel="tests" name="Failed suite [ShoppingTestSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Error Tests(failed)">
+    <classes>
+      <class name="shoppingsitetests.ErrorValidations">
+        <methods>
+          <include name="loginErrorTest"/>
+          <include name="tearDown"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- shoppingsitetests.ErrorValidations -->
+    </classes>
+  </test> <!-- Error Tests(failed) -->
+  <test thread-count="5" parallel="tests" name="Submit Order Tests(failed)">
     <classes>
       <class name="shoppingsitetests.PlaceOrderTest">
         <methods>
-          <include name="submitOrderTest"/>
+          <include name="orderHistory"/>
+          <include name="submitOrderTest" invocation-numbers="0 1"/>
           <include name="tearDown"/>
           <include name="launchApplication"/>
         </methods>

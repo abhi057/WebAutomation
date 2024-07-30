@@ -2,12 +2,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="ShoppingTestSuite">
 
+	<listeners>
+		<listener class-name="shoppingTests.reusableComponents.Listeners" />
+	</listeners>
+
 	<groups>
 		<run>
 			<include name="LoginError" />
 		</run>
 	</groups>
-
 
 	<test thread-count="1" name="Submit Order Tests">
 		<classes>
@@ -15,12 +18,10 @@
 		</classes>
 	</test>
 
-
 	<test thread-count="1" name="Error Tests">
 		<classes>
 			<class name="shoppingsitetests.ErrorValidations" />
 		</classes>
 	</test>
 
-
-</suite> <!-- Suite -->
+</suite>
