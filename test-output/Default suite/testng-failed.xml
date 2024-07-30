@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="shoppingsitetests.PlaceOrderTest">
+      <class name="shoppingTests.ExtentReports.ExtentReportManager">
         <methods>
-          <include name="orderHistory"/>
-          <include name="submitOrderTest" invocation-numbers="1"/>
-          <include name="tearDown"/>
-          <include name="launchApplication"/>
+          <include name="initialDemo2"/>
+          <include name="config"/>
         </methods>
-      </class> <!-- shoppingsitetests.PlaceOrderTest -->
+      </class> <!-- shoppingTests.ExtentReports.ExtentReportManager -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,23 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="5" passed="2" failed="0" skipped="0">
+<testng-results retried="2" ignored="0" total="7" passed="1" failed="3" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-29T17:57:14 IST" name="ShoppingTestSuite" finished-at="2024-07-29T17:57:53 IST" duration-ms="38420">
+  <suite started-at="2024-07-30T16:56:58 IST" name="ShoppingTestSuite" finished-at="2024-07-30T16:57:52 IST" duration-ms="53501">
     <groups>
       <group name="Purchase">
-        <method signature="PlaceOrderTest.submitOrderTest(java.util.HashMap)[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" name="submitOrderTest" class="shoppingsitetests.PlaceOrderTest"/>
+        <method signature="PlaceOrderTest.submitOrderTest(java.util.HashMap)[pri:0, instance:shoppingsitetests.PlaceOrderTest@6d4e5011]" name="submitOrderTest" class="shoppingsitetests.PlaceOrderTest"/>
       </group> <!-- Purchase -->
+      <group name="LoginError">
+        <method signature="ErrorValidations.loginErrorTest()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" name="loginErrorTest" class="shoppingsitetests.ErrorValidations"/>
+      </group> <!-- LoginError -->
       <group name="Smoke">
-        <method signature="PlaceOrderTest.submitOrderTest(java.util.HashMap)[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" name="submitOrderTest" class="shoppingsitetests.PlaceOrderTest"/>
+        <method signature="PlaceOrderTest.submitOrderTest(java.util.HashMap)[pri:0, instance:shoppingsitetests.PlaceOrderTest@6d4e5011]" name="submitOrderTest" class="shoppingsitetests.PlaceOrderTest"/>
       </group> <!-- Smoke -->
+      <group name="ProductError">
+        <method signature="ErrorValidations.productErrorTest()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" name="productErrorTest" class="shoppingsitetests.ErrorValidations"/>
+      </group> <!-- ProductError -->
     </groups>
-    <test started-at="2024-07-29T17:57:14 IST" name="Submit Order Tests" finished-at="2024-07-29T17:57:53 IST" duration-ms="38380">
+    <test started-at="2024-07-30T16:56:58 IST" name="Error Tests" finished-at="2024-07-30T16:57:27 IST" duration-ms="28641">
+      <class name="shoppingsitetests.ErrorValidations">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" started-at="2024-07-30T16:56:58 IST" name="launchApplication" finished-at="2024-07-30T16:57:02 IST" duration-ms="4153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method retried="true" signature="loginErrorTest()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" started-at="2024-07-30T16:57:02 IST" name="loginErrorTest" finished-at="2024-07-30T16:57:03 IST" duration-ms="732" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Incorrect email or password.] but found [Incorrect email or passwor]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Incorrect email or password.] but found [Incorrect email or passwor]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at shoppingsitetests.ErrorValidations.loginErrorTest(ErrorValidations.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginErrorTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" started-at="2024-07-30T16:57:03 IST" name="tearDown" finished-at="2024-07-30T16:57:03 IST" duration-ms="200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" started-at="2024-07-30T16:57:03 IST" name="launchApplication" finished-at="2024-07-30T16:57:05 IST" duration-ms="1829" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method retried="true" signature="loginErrorTest()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" started-at="2024-07-30T16:57:05 IST" name="loginErrorTest" finished-at="2024-07-30T16:57:06 IST" duration-ms="612" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Incorrect email or password.] but found [Incorrect email or passwor]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Incorrect email or password.] but found [Incorrect email or passwor]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at shoppingsitetests.ErrorValidations.loginErrorTest(ErrorValidations.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginErrorTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" started-at="2024-07-30T16:57:06 IST" name="tearDown" finished-at="2024-07-30T16:57:06 IST" duration-ms="159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" started-at="2024-07-30T16:57:06 IST" name="launchApplication" finished-at="2024-07-30T16:57:08 IST" duration-ms="1700" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="loginErrorTest()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" started-at="2024-07-30T16:57:08 IST" name="loginErrorTest" finished-at="2024-07-30T16:57:09 IST" duration-ms="1088" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Incorrect email or password.] but found [Incorrect email or passwor]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Incorrect email or password.] but found [Incorrect email or passwor]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at shoppingsitetests.ErrorValidations.loginErrorTest(ErrorValidations.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginErrorTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" started-at="2024-07-30T16:57:09 IST" name="tearDown" finished-at="2024-07-30T16:57:09 IST" duration-ms="160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" started-at="2024-07-30T16:57:09 IST" name="launchApplication" finished-at="2024-07-30T16:57:12 IST" duration-ms="2548" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="productErrorTest()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" started-at="2024-07-30T16:57:12 IST" name="productErrorTest" finished-at="2024-07-30T16:57:26 IST" duration-ms="14756" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productErrorTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:shoppingsitetests.ErrorValidations@428640fa]" started-at="2024-07-30T16:57:26 IST" name="tearDown" finished-at="2024-07-30T16:57:27 IST" duration-ms="662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- shoppingsitetests.ErrorValidations -->
+    </test> <!-- Error Tests -->
+    <test started-at="2024-07-30T16:56:58 IST" name="Submit Order Tests" finished-at="2024-07-30T16:57:52 IST" duration-ms="53501">
       <class name="shoppingsitetests.PlaceOrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" started-at="2024-07-29T17:57:15 IST" name="launchApplication" finished-at="2024-07-29T17:57:19 IST" duration-ms="4546" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shoppingsitetests.PlaceOrderTest@6d4e5011]" started-at="2024-07-30T16:56:59 IST" name="launchApplication" finished-at="2024-07-30T16:57:02 IST" duration-ms="3853" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" started-at="2024-07-29T17:57:19 IST" name="submitOrderTest" data-provider="getData" finished-at="2024-07-29T17:57:35 IST" duration-ms="15515" status="PASS">
+        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:shoppingsitetests.PlaceOrderTest@6d4e5011]" started-at="2024-07-30T16:57:02 IST" name="submitOrderTest" data-provider="getData" finished-at="2024-07-30T16:57:39 IST" duration-ms="36657" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -25,18 +200,55 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at shoppingsitetests.PlaceOrderTest.submitOrderTest(PlaceOrderTest.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrderTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" started-at="2024-07-29T17:57:35 IST" name="tearDown" finished-at="2024-07-29T17:57:35 IST" duration-ms="186" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:shoppingsitetests.PlaceOrderTest@6d4e5011]" started-at="2024-07-30T16:57:39 IST" name="tearDown" finished-at="2024-07-30T16:57:39 IST" duration-ms="215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" started-at="2024-07-29T17:57:35 IST" name="launchApplication" finished-at="2024-07-29T17:57:37 IST" duration-ms="1891" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shoppingsitetests.PlaceOrderTest@6d4e5011]" started-at="2024-07-30T16:57:39 IST" name="launchApplication" finished-at="2024-07-30T16:57:41 IST" duration-ms="1721" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" started-at="2024-07-29T17:57:37 IST" name="submitOrderTest" data-provider="getData" finished-at="2024-07-29T17:57:52 IST" duration-ms="15527" status="PASS">
+        <test-method signature="submitOrderTest(java.util.HashMap)[pri:0, instance:shoppingsitetests.PlaceOrderTest@6d4e5011]" started-at="2024-07-30T16:57:41 IST" name="submitOrderTest" data-provider="getData" finished-at="2024-07-30T16:57:52 IST" duration-ms="10589" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -44,16 +256,111 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <button _ngcontent-pdy-c33="" routerlink="/dashboard/cart" class="btn btn-custom" style="margin-top: -10px;" tabindex="0">...</button> is not clickable at point (1280, 27). Other element would receive the click: <div _ngcontent-pdy-c31="" class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating" style="background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed;">...</div>
+  (Session info: chrome=126.0.6478.185)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [19d6159a6dcaec1935457ca125ded084, clickElement {id=f.78B2116AA4FCA4E0590DC1B77D767E5F.d.6926711EBF0AF1DFD9011AA2BA9B37C7.e.178}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.185, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Abhishek\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56185}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56185/devtoo..., se:cdpVersion: 126.0.6478.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (19d6159a6dcaec1935457ca125ded084)] -> xpath: //button[@class='btn btn-custom' and contains(@routerlink, 'cart')]]
+Session ID: 19d6159a6dcaec1935457ca125ded084]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button _ngcontent-pdy-c33="" routerlink="/dashboard/cart" class="btn btn-custom" style="margin-top: -10px;" tabindex="0">...</button> is not clickable at point (1280, 27). Other element would receive the click: <div _ngcontent-pdy-c31="" class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating" style="background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed;">...</div>
+  (Session info: chrome=126.0.6478.185)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [19d6159a6dcaec1935457ca125ded084, clickElement {id=f.78B2116AA4FCA4E0590DC1B77D767E5F.d.6926711EBF0AF1DFD9011AA2BA9B37C7.e.178}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.185, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Abhishek\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56185}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56185/devtoo..., se:cdpVersion: 126.0.6478.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (19d6159a6dcaec1935457ca125ded084)] -> xpath: //button[@class='btn btn-custom' and contains(@routerlink, 'cart')]]
+Session ID: 19d6159a6dcaec1935457ca125ded084
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+at shoppingTests.reusableComponents.ReuseableComponents.goToCartPage(ReuseableComponents.java:56)
+at shoppingsitetests.PlaceOrderTest.submitOrderTest(PlaceOrderTest.java:31)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrderTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:shoppingsitetests.PlaceOrderTest@50b5ac82]" started-at="2024-07-29T17:57:52 IST" name="tearDown" finished-at="2024-07-29T17:57:53 IST" duration-ms="359" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:shoppingsitetests.PlaceOrderTest@6d4e5011]" started-at="2024-07-30T16:57:52 IST" name="tearDown" finished-at="2024-07-30T16:57:52 IST" duration-ms="120" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+        <test-method signature="orderHistory()[pri:0, instance:shoppingsitetests.PlaceOrderTest@6d4e5011]" started-at="2024-07-30T16:57:52 IST" name="orderHistory" finished-at="2024-07-30T16:57:52 IST" depends-on-methods="shoppingsitetests.PlaceOrderTest.submitOrderTest" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method PlaceOrderTest.orderHistory()[pri:0, instance:shoppingsitetests.PlaceOrderTest@6d4e5011] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method PlaceOrderTest.orderHistory()[pri:0, instance:shoppingsitetests.PlaceOrderTest@6d4e5011] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistory -->
       </class> <!-- shoppingsitetests.PlaceOrderTest -->
     </test> <!-- Submit Order Tests -->
-    <test started-at="2024-07-29T17:57:53 IST" name="Error Tests" finished-at="2024-07-29T17:57:53 IST" duration-ms="2">
-    </test> <!-- Error Tests -->
   </suite> <!-- ShoppingTestSuite -->
 </testng-results>

@@ -21,7 +21,7 @@ import shoppingTests.pageObjects.LandingPage;
 
 public class BaseTest {
 
-	WebDriver driver;
+	public WebDriver driver;
 	public LandingPage landingpage;
 
 	public WebDriver initializeDriver() {
@@ -33,11 +33,12 @@ public class BaseTest {
 	}
 
    // Method to take screenshot
-	public void getScreenshot(String testCaseName) throws IOException {
+	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		File file = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
 		FileUtils.copyFile(source, file);
+		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
 	}
 	
 	
